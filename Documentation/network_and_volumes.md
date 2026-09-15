@@ -137,7 +137,7 @@ The mobile workload can connect to the database via `localhost:5432`.
 Box Runner separates ephemeral application code from durable state:
 
 ```text
-/data/user/0/com.box.android/files/
+/data/user/0/dev.tanguykonan.boxrunner/files/
 ├── sandboxes/
 │   └── app_<id>/             # Ephemeral sandbox directory
 │       ├── main.py
@@ -168,9 +168,9 @@ Box Runner separates ephemeral application code from durable state:
 Box Runner automatically exports paths to mounted volumes:
 
 ```bash
-VOLUME_MY_DATABASE=/data/user/0/com.box.android/files/volumes/my_database
-BOX_VOLUME_MY_DATABASE=/data/user/0/com.box.android/files/volumes/my_database
-DATA_DIR=/data/user/0/com.box.android/files/volumes/my_database
+VOLUME_MY_DATABASE=/data/user/0/dev.tanguykonan.boxrunner/files/volumes/my_database
+BOX_VOLUME_MY_DATABASE=/data/user/0/dev.tanguykonan.boxrunner/files/volumes/my_database
+DATA_DIR=/data/user/0/dev.tanguykonan.boxrunner/files/volumes/my_database
 ```
 
 Any configuration variable referencing the mount target (for example
