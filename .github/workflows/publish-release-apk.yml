@@ -25,6 +25,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
 
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
       - name: Extract Tag Version and Assemble Release APK
         run: |
           RAW_TAG="${GITHUB_REF#refs/tags/}"
