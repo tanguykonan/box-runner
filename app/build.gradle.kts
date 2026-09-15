@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -24,9 +27,47 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    val localProperties = Properties().apply {
+        val localPropertiesFile = rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            FileInputStream(localPropertiesFile).use { load(it) }
+        }
+    }
+
+    val keystoreFilePath = System.getenv("KEYSTORE_FILE")
+        ?: localProperties.getProperty("RELEASE_STORE_FILE")
+        ?: (project.findProperty("RELEASE_STORE_FILE") as? String)
+        ?: rootProject.file("release.jks").takeIf { it.exists() }?.absolutePath
+
+    val keystoreStorePassword = System.getenv("KEYSTORE_PASSWORD")
+        ?: localProperties.getProperty("RELEASE_STORE_PASSWORD")
+        ?: (project.findProperty("RELEASE_STORE_PASSWORD") as? String)
+
+    val keystoreKeyAlias = System.getenv("KEY_ALIAS")
+        ?: localProperties.getProperty("RELEASE_KEY_ALIAS")
+        ?: (project.findProperty("RELEASE_KEY_ALIAS") as? String)
+        ?: "box-runner-key"
+
+    val keystoreKeyPassword = System.getenv("KEY_PASSWORD")
+        ?: localProperties.getProperty("RELEASE_KEY_PASSWORD")
+        ?: (project.findProperty("RELEASE_KEY_PASSWORD") as? String)
+        ?: keystoreStorePassword
+
+    signingConfigs {
+        if (keystoreFilePath != null && keystoreStorePassword != null && file(keystoreFilePath).exists()) {
+            create("release") {
+                storeFile = file(keystoreFilePath)
+                storePassword = keystoreStorePassword
+                keyAlias = keystoreKeyAlias
+                keyPassword = keystoreKeyPassword
+            }
+        }
+    }
+
     buildTypes {
         release {
-            signingConfig = signingConfigs.getByName("debug")
+            val releaseSigning = signingConfigs.findByName("release")
+            signingConfig = releaseSigning ?: signingConfigs.getByName("debug")
             optimization {
                 enable = false
             }
