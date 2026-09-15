@@ -18,7 +18,7 @@ android {
     val customVersionCode = (project.findProperty("appVersionCode") as? String)?.toIntOrNull() ?: 1
 
     defaultConfig {
-        applicationId = "com.box.android"
+        applicationId = "dev.tanguykonan.boxrunner"
         minSdk = 24
         targetSdk = 28
         versionCode = customVersionCode
