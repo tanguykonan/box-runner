@@ -1,0 +1,291 @@
+<resources>
+    <!-- App & Common -->
+    <string name="app_name">Box Runner</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_close">Close</string>
+    <string name="action_back">Back</string>
+    <string name="action_save">Save</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_add">Add</string>
+    <string name="action_start">Start</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_continue">Continue</string>
+
+    <!-- Units -->
+    <string name="unit_mb">MB</string>
+    <string name="unit_gb">GB</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_badge_standalone">STANDALONE</string>
+    <string name="onboarding_badge_background">BACKGROUND</string>
+    <string name="onboarding_badge_monitoring">MONITORING</string>
+    <string name="onboarding_subtitle">Run your applications on mobile</string>
+    <string name="onboarding_main_desc">Self-contained execution engine for your Python and Node.js applications in an isolated sandbox.</string>
+    <string name="onboarding_feat1_title">Fast Deployment</string>
+    <string name="onboarding_feat1_desc">Launch packages from Box Hub instantly</string>
+    <string name="onboarding_feat2_title">Sandbox Isolation</string>
+    <string name="onboarding_feat2_desc">Airtight and secure execution environment</string>
+    <string name="onboarding_feat3_title">Mobile Self-Hosting</string>
+    <string name="onboarding_feat3_desc">Your applications active 24/7</string>
+    <string name="onboarding_page1_title">Run your services everywhere</string>
+    <string name="onboarding_page1_desc">Self-host, test, and run your backend applications and tools directly on your device.</string>
+    <string name="onboarding_page2_title">Keep your workflows alive</string>
+    <string name="onboarding_page2_desc">Optimized runtime processes keep background workers, bots, and APIs alive.</string>
+    <string name="onboarding_page3_title">Inspect real-time telemetry</string>
+    <string name="onboarding_page3_desc">Track live hardware metrics, CPU, RAM, persistent volumes, and running environments.</string>
+    <string name="onboarding_tagline">Your self-hosted box container on mobile</string>
+    <string name="onboarding_btn_start">Get Started</string>
+
+    <!-- Auth / Login -->
+    <string name="login_subtitle">Run backend apps, APIs and background tools directly on Android.</string>
+    <string name="login_btn_google">Continue with Google</string>
+    <string name="login_btn_github">Continue with GitHub</string>
+    <string name="login_btn_email">Continue with Email</string>
+    <string name="login_sign_in">Sign In</string>
+    <string name="login_all_options">All sign-in options</string>
+    <string name="login_verification_code_title">Verification Code</string>
+    <string name="login_verification_code_prompt">Enter the 4-digit code sent to\n%s</string>
+    <string name="login_otp_title">Check your inbox</string>
+    <string name="login_otp_desc">A 6-digit confirmation code has been sent to %s</string>
+    <string name="login_otp_btn_verify">Verify &amp; Log in</string>
+    <string name="login_btn_verify">Verify</string>
+    <string name="login_btn_change_email">Change email</string>
+    <string name="login_otp_btn_resend">Resend code</string>
+    <string name="login_terms">By continuing, you agree to our Terms of Service.</string>
+    <string name="login_terms_prefix">"By continuing, you agree to Box Runner\'s "</string>
+    <string name="login_terms_service">Terms of Service</string>
+    <string name="login_terms_suffix">.</string>
+    <string name="login_err_empty_email">Please enter a valid email address</string>
+    <string name="login_err_invalid_email">Invalid email address format</string>
+    <string name="login_err_empty_code">Please enter the 4-digit code</string>
+    <string name="login_err_invalid_code">Verification code must contain exactly 4 digits</string>
+    <string name="login_err_google_failed">Google sign-in failed</string>
+    <string name="login_err_github_failed">GitHub sign-in failed</string>
+    <string name="login_err_send_code_failed">Failed to send verification code</string>
+    <string name="login_err_invalid_security_code">Invalid security code</string>
+
+    <!-- Navigation / Tabs -->
+    <string name="tab_resources">Resources</string>
+    <string name="tab_services">Services</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- Home Screen -->
+    <string name="home_search_placeholder">Search an application...</string>
+    <string name="home_search_close_desc">Close search</string>
+    <string name="home_search_icon_desc">Search</string>
+    <string name="home_empty_search_title">No applications found</string>
+    <string name="home_empty_title">Deploy a Box</string>
+    <string name="home_empty_desc">Load your package from the official hub to run your first application.</string>
+    <string name="home_empty_ref_placeholder">user/package:tag</string>
+    <string name="home_delete_confirm_title">Delete application</string>
+    <string name="home_delete_confirm_text">Are you sure you want to delete « %s »? This action cannot be undone.</string>
+    <string name="home_new_item_title">New item</string>
+    <string name="home_new_app_title">New application</string>
+    <string name="home_new_app_desc">Deploy from Box Hub</string>
+    <string name="home_new_volume_title">New volume</string>
+    <string name="home_new_volume_desc">Create persistent storage</string>
+
+    <!-- BoxAppItem -->
+    <string name="app_status_running">Running</string>
+    <string name="app_status_inactive">Inactive</string>
+    <string name="app_status_stopped">Stopped</string>
+
+    <!-- Resources Screen -->
+    <string name="resources_consumption_title">Consumption</string>
+    <string name="resources_activity_title">Runner Activity</string>
+    <string name="resources_live_badge">Live</string>
+    <string name="resources_metric_cpu">CPU</string>
+    <string name="resources_metric_ram">RAM</string>
+    <string name="resources_metric_rom">ROM</string>
+    <string name="resources_metric_battery">Battery</string>
+    <string name="resources_specs_title">Hardware Specifications</string>
+    <string name="resources_spec_cpu_subtitle">8 Cores</string>
+    <string name="resources_spec_cpu_cores">%d Cores</string>
+    <string name="resources_spec_ram_subtitle">LPDDR5</string>
+    <string name="resources_spec_free_space">%s free</string>
+    <string name="resources_spec_rom_subtitle">Internal storage</string>
+    <string name="resources_spec_battery_subtitle">Power source</string>
+    <string name="resources_spec_battery_charging">Charging</string>
+    <string name="resources_spec_battery_discharging">Discharging</string>
+
+    <!-- New Application Screen -->
+    <string name="new_app_title">New application</string>
+    <string name="new_app_section_package">Package Reference</string>
+    <string name="new_app_package_placeholder">user/paquet:tag</string>
+    <string name="new_app_package_format_error">Expected format: user/package or user/package:tag</string>
+    <string name="new_app_package_helper">Downloaded from the Box Hub catalogue.</string>
+    <string name="new_app_token_title">Access Token</string>
+    <string name="new_app_token_optional">(optional)</string>
+    <string name="new_app_token_hide">Hide token</string>
+    <string name="new_app_token_show">Show token</string>
+    <string name="new_app_token_helper">Required if the package comes from a private repository.</string>
+    <string name="new_app_section_local">Local Configuration</string>
+    <string name="new_app_name_title">Application Name</string>
+    <string name="new_app_name_placeholder">My Application</string>
+    <string name="new_app_name_helper">Name identifying the service on your device.</string>
+    <string name="new_app_port_title">Network Port (Optional)</string>
+    <string name="new_app_port_helper">Dedicated local TCP network port for the service.</string>
+    <string name="new_app_btn_install">Install</string>
+    <string name="new_app_err_empty_package">Please specify a package reference</string>
+    <string name="new_app_err_invalid_format">Invalid format (e.g. user/paquet:tag)</string>
+    <string name="new_app_err_empty_name">Please enter a name for the application</string>
+
+    <!-- App Details & Env Screen -->
+    <string name="details_title">Service Details</string>
+    <string name="details_delete_disabled_tooltip">Stop the service to delete it</string>
+    <string name="details_delete_service_tooltip">Delete service</string>
+    <string name="details_edit_name_tooltip">Edit name</string>
+    <string name="details_section_package_info">Package Information</string>
+    <string name="details_metric_environment">Environment</string>
+    <string name="details_metric_network_port">Network Port</string>
+    <string name="details_metric_port_none">None</string>
+    <string name="details_metric_ram_memory">RAM Memory</string>
+    <string name="details_metric_activity">Activity</string>
+    <string name="details_section_env">Variables .env.local</string>
+    <string name="details_env_not_configured">Not configured</string>
+    <string name="details_env_configured_count">%d configured</string>
+    <string name="details_btn_manage_env">Manage variables</string>
+    <string name="details_section_logs">Console</string>
+    <string name="details_logs_empty_running">Process is running. Waiting for stream output…</string>
+    <string name="details_btn_start">Start service</string>
+    <string name="details_btn_downloading">Downloading</string>
+    <string name="details_btn_starting">Starting…</string>
+    <string name="details_btn_stop">Stop service</string>
+    <string name="details_delete_confirm_title">Delete service</string>
+    <string name="details_delete_confirm_text">Are you sure you want to delete « %s »? This action cannot be undone.</string>
+
+    <!-- Env Config Bottom Sheet -->
+    <string name="env_title">Environment Variables</string>
+    <string name="env_tab_key_value">Key / Value Fields</string>
+    <string name="env_tab_raw">Raw Editor</string>
+    <string name="env_empty_text">No variables defined. You can add one below.</string>
+    <string name="env_placeholder_value_for">Value for %s</string>
+    <string name="env_hide_value">Hide value</string>
+    <string name="env_show_value">Show value</string>
+    <string name="env_err_field">Please provide a value for this variable.</string>
+    <string name="env_new_key_placeholder">VARIABLE_NAME</string>
+    <string name="env_new_val_placeholder">Value</string>
+    <string name="env_btn_add_variable">Add a variable</string>
+    <string name="env_raw_label">Paste your KEY=VALUE pairs (one per line):</string>
+    <string name="env_alert_all_required">All variables must be filled.</string>
+    <string name="env_btn_save_and_start">Save and Start</string>
+    <string name="env_btn_save_only">Save only</string>
+
+    <!-- Volumes -->
+    <string name="volumes_title">Volumes</string>
+    <string name="volumes_new_tooltip">New Volume</string>
+    <string name="volumes_summary_title">Global Space</string>
+    <string name="volumes_summary_count">%d volume(s)</string>
+    <string name="volumes_empty_title">No persistent volumes</string>
+    <string name="volumes_empty_desc">Create a volume to persist files for your services.</string>
+    <string name="volumes_btn_create">Create a volume</string>
+    <string name="volumes_delete_confirm_title">Delete volume</string>
+    <string name="volumes_delete_confirm_text">Are you sure you want to delete « %s »? All contained data will be permanently erased.</string>
+    <string name="volume_card_created">Created %s</string>
+    <string name="volume_card_delete_tooltip">Delete volume</string>
+    <string name="volume_card_mount">Mount</string>
+    <string name="volume_card_usage">Usage</string>
+
+    <!-- Volume Presets -->
+    <string name="volume_preset_500_mb">500 MB</string>
+    <string name="volume_preset_1_gb">1 GB</string>
+    <string name="volume_preset_2_5_gb">2.5 GB</string>
+    <string name="volume_preset_5_gb">5 GB</string>
+
+    <!-- New Volume Screen -->
+    <string name="new_volume_title">New volume</string>
+    <string name="new_volume_name_title">Volume Name</string>
+    <string name="new_volume_capacity_title">Maximum Capacity</string>
+    <string name="new_volume_capacity_standalone">Standalone</string>
+    <string name="new_volume_capacity_custom">Custom</string>
+    <string name="new_volume_custom_size_placeholder">Size</string>
+    <string name="new_volume_mount_title">Mount Point</string>
+    <string name="new_volume_btn_create">Create Volume</string>
+    <string name="new_volume_err_empty_name">Please provide a name for the volume</string>
+    <string name="new_volume_err_empty_capacity">Please specify the desired maximum capacity</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_section_network">Local Network</string>
+    <string name="settings_network_access_title">Local Network Access</string>
+    <string name="settings_network_access_desc">Share on local network</string>
+    <string name="settings_section_storage">Storage</string>
+    <string name="settings_volumes_title">Volumes</string>
+    <string name="settings_volumes_desc">Persistent folders</string>
+    <string name="settings_cache_title">Clear Build Cache</string>
+    <string name="settings_cache_desc">Free up storage space</string>
+    <string name="settings_cache_cleared">Build cache cleared successfully</string>
+    <string name="settings_cache_cleared_with_size">%s of cache freed</string>
+    <string name="settings_cache_already_empty">Build cache is empty</string>
+    <string name="settings_section_guide">Guide</string>
+    <string name="settings_faq_title">Box Runner FAQ</string>
+    <string name="settings_ecosystem_title">Box Ecosystem</string>
+    <string name="settings_privacy_title">Privacy Policy</string>
+    <string name="settings_footer">Box Runner for Android %1$s (%2$s)</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_default_username">Developer</string>
+    <string name="profile_console_title">Developer Space</string>
+    <string name="profile_console_subtitle">Web management console</string>
+    <string name="profile_signout_title">Sign out</string>
+    <string name="profile_signout_subtitle">End current session</string>
+    <string name="profile_signout_confirm_title">Sign Out</string>
+    <string name="profile_signout_confirm_text">Are you sure you want to sign out?</string>
+
+    <!-- FAQ Box -->
+    <string name="faq_title">FAQ Box</string>
+    <string name="faq_search_placeholder">Search a question...</string>
+    <string name="faq_search_clear">Clear search</string>
+    <string name="faq_empty_title">No questions found</string>
+    <string name="faq_empty_desc">Try searching with different keywords or select another category.</string>
+    <string name="faq_cat_all">All</string>
+    <string name="faq_cat_general">General</string>
+    <string name="faq_cat_packages">Packages</string>
+    <string name="faq_cat_storage">Storage</string>
+    <string name="faq_cat_runtime">Runtime</string>
+    <string name="faq_cat_network">Network</string>
+
+    <string name="faq_q1">What is Box Runner?</string>
+    <string name="faq_a1">Box Runner is an autonomous mobile runtime container environment designed to deploy, run, and manage Python and Node.js backend applications and tools directly on your Android device.</string>
+
+    <string name="faq_q2">How does sandbox isolation work?</string>
+    <string name="faq_a2">Each application runs in a strictly isolated, hermetic sandbox process with its own dedicated memory allocation, environment variables, and filesystem scope to guarantee security and system stability.</string>
+
+    <string name="faq_q3">What is a package reference?</string>
+    <string name="faq_a3">A package reference (e.g. \"user/fastapi-backend:latest\") specifies an image repository from Box Hub containing your application code, prebuilt dependencies, and runtime configuration manifest.</string>
+
+    <string name="faq_q4">When do I need an Access Token?</string>
+    <string name="faq_a4">An Access Token is only required if the package you are installing is hosted in a private repository on Box Hub. Public packages can be installed directly without any token.</string>
+
+    <string name="faq_q5">What are persistent volumes?</string>
+    <string name="faq_a5">Persistent volumes are dedicated storage spaces that preserve your data, database files, and uploaded assets across service restarts, upgrades, and phone reboots.</string>
+
+    <string name="faq_q6">How do I mount a volume in my application?</string>
+    <string name="faq_a6">When creating or configuring a volume, assign a mount point (such as \"/data\" or \"/app/storage\"). The service will then access this persistent directory transparently.</string>
+
+    <string name="faq_q7">Can services run in the background?</string>
+    <string name="faq_a7">Yes. Box Runner operates an optimized foreground background service that keeps your workers, webhooks, bots, and APIs alive 24/7 while preserving battery life.</string>
+
+    <string name="faq_q8">How do I configure environment variables?</string>
+    <string name="faq_a8">Open your service details, tap \"Manage variables\", and add your secret keys, tokens, and config pairs using either the structured key-value editor or the raw text editor.</string>
+
+    <string name="faq_q9">How do I access a running web server or API?</string>
+    <string name="faq_a9">If a network port is specified (e.g. 8000), you can access your service on \"http://localhost:8000\" directly from your phone browser, or from other devices on the same Wi-Fi network if Local Network Access is enabled in Settings.</string>
+
+    <string name="faq_help_title">Still have questions?</string>
+    <string name="faq_help_desc">Join the Box developer community or explore the official documentation.</string>
+
+    <!-- Service Details - Logs -->
+    <string name="details_logs_copied">Logs copied</string>
+    <string name="details_copy_logs_desc">Copy logs</string>
+
+    <!-- Foreground Notification -->
+    <string name="notification_channel_name">Box Runner Service</string>
+    <string name="notification_channel_desc">Keeps Box microservices and servers running in the background</string>
+    <string name="notification_apps_running">%d application(s) running</string>
+    <string name="notification_engine_active">Background execution engine active</string>
+
+    <!-- Process & Sandbox Errors -->
+    <string name="error_sandbox_extract_failed">Package could not be extracted in sandbox. Check Box Hub availability or network.</string>
+    <string name="error_entrypoint_not_found">Entrypoint not found in sandbox (no \'%s\' file or entrypoint declared in boxfile.yml).</string>
+</resources>

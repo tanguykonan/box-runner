@@ -1,0 +1,48 @@
+name: Build Debug APK
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+permissions:
+  contents: read
+
+jobs:
+  build-apk:
+    name: Build Debug APK
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v6
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: Assemble Debug APK
+        run: ./gradlew assembleDebug
+
+      - name: Prepare APK with Version and Commit SHA
+        id: apk_info
+        run: |
+          VERSION=$(grep 'versionName' app/build.gradle.kts | cut -d '"' -f 2)
+          COMMIT_SHA=$(echo "${{ github.event.pull_request.head.sha || github.sha }}" | cut -c1-7)
+          TAG_NAME="box-mobile_v${VERSION}+${COMMIT_SHA}-debug"
+          APK_FILENAME="${TAG_NAME}.apk"
+          cp app/build/outputs/apk/debug/app-debug.apk "app/build/outputs/apk/debug/${APK_FILENAME}"
+          echo "artifact_name=${TAG_NAME}" >> $GITHUB_OUTPUT
+          echo "apk_filename=${APK_FILENAME}" >> $GITHUB_OUTPUT
+
+      - name: Upload Debug APK Artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.apk_info.outputs.artifact_name }}
+          path: app/build/outputs/apk/debug/${{ steps.apk_info.outputs.apk_filename }}
+          if-no-files-found: error

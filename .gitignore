@@ -1,0 +1,69 @@
+# Build and Package Artifacts
+*.apk
+*.aar
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+build/
+*/build/
+
+# Gradle Cache
+.gradle/
+buildOutputCleanup/
+
+# Kotlin Compiler Cache
+.kotlin/
+
+# Local Configuration
+local.properties
+
+# Logs and Profiling
+*.log
+*.hprof
+*.trace
+captures/
+.navigation/
+
+# Native Build
+.externalNativeBuild/
+.cxx/
+
+# Keystores and Secrets
+*.jks
+*.keystore
+*.p12
+*.key
+*.bks
+signing/
+google-services.json
+.env
+.env.*
+.env.local
+
+# Box Archives and Test Artifacts
+*.box
+*.tar.zst
+*.zst
+
+# IDE and Editor Files
+*.iml
+*.iws
+*.ipr
+.idea/
+.idea_modules/
+
+# Node and Tools
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini

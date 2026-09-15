@@ -1,0 +1,34 @@
+name: Lint Documentation
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - '**.md'
+      - '.github/**.md'
+      - 'Documentation/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - '**.md'
+      - '.github/**.md'
+      - 'Documentation/**'
+
+permissions:
+  contents: read
+
+jobs:
+  lint-markdown:
+    name: Markdownlint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '26'
+
+      - name: Run Markdownlint
+        run: npx markdownlint-cli "Documentation/*.md" ".github/*.md" "*.md"
