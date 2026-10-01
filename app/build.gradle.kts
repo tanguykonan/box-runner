@@ -100,7 +100,7 @@ dependencies {
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.navigation.compose)
     implementation("androidx.browser:browser:1.8.0")
-    implementation("com.github.luben:zstd-jni:1.5.6-8@aar")
+    implementation("com.github.luben:zstd-jni:1.5.7-20@aar")
     implementation("org.apache.commons:commons-compress:1.26.2")
     implementation("org.tukaani:xz:1.9")
     testImplementation(libs.junit)
